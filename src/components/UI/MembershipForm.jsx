@@ -8,31 +8,23 @@ const MembershipForm = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     return (
-        <div className="relative w-full overflow-hidden bg-transparent" style={{ height: '2200px' }}>
+        <div className="relative w-full h-[800px] bg-white rounded-2xl shadow-xl overflow-hidden">
             {isLoading && (
-                <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-white/50 backdrop-blur-sm">
+                <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-white">
                     <Loader2 className="animate-spin text-primary mb-2" size={32} />
                     <p className="text-sm font-medium text-gray-400">Yükleniyor...</p>
                 </div>
             )}
-
-            <div className="w-full">
-                <iframe
-                    src={registrationUrl}
-                    scrolling="no"
-                    loading="eager"
-                    onLoad={() => setIsLoading(false)}
-                    frameBorder="0"
-                    className="w-full animate-fade-in"
-                    style={{
-                        height: '3220px',
-                        marginTop: '-1020px',
-                        border: 'none',
-                        width: '100%'
-                    }}
-                    title="Oriflame Üyelik Formu"
-                ></iframe>
-            </div>
+            <iframe
+                src={registrationUrl}
+                scrolling="yes"
+                loading="eager"
+                onLoad={() => setIsLoading(false)}
+                frameBorder="0"
+                className="w-full h-full animate-fade-in"
+                style={{ border: 'none' }}
+                title="Oriflame Üyelik Formu"
+            ></iframe>
         </div>
     );
 };
