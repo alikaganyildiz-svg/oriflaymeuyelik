@@ -8,7 +8,7 @@ const MembershipForm = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     return (
-        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100 flex flex-col h-full min-h-[850px]">
+        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100 flex flex-col h-full min-h-[1350px]">
             <div className="bg-primary text-white text-center py-4 px-4 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                     <UserPlus size={20} />
@@ -30,12 +30,12 @@ const MembershipForm = () => {
 
                 <iframe
                     src={registrationUrl}
-                    scrolling="yes"
+                    scrolling="no"
                     loading="eager"
                     onLoad={() => setIsLoading(false)}
                     frameBorder="0"
                     className="w-full flex-1 animate-fade-in"
-                    style={{ minHeight: '800px' }}
+                    style={{ height: '1325px', minHeight: '1325px' }}
                     title="Oriflame Üyelik Formu"
                 ></iframe>
 
