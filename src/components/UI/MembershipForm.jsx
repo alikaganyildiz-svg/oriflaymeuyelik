@@ -8,9 +8,9 @@ const MembershipForm = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     return (
-        <div className="relative w-full overflow-hidden rounded-2xl shadow-xl bg-white" style={{ height: '2200px' }}>
+        <div className="relative w-full overflow-hidden bg-transparent" style={{ height: '2200px' }}>
             {isLoading && (
-                <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-white">
+                <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-white/50 backdrop-blur-sm">
                     <Loader2 className="animate-spin text-primary mb-2" size={32} />
                     <p className="text-sm font-medium text-gray-400">Yükleniyor...</p>
                 </div>
