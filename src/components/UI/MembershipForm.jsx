@@ -25,8 +25,8 @@ const MembershipForm = () => {
                     frameBorder="0"
                     className="w-full animate-fade-in"
                     style={{
-                        height: '1800px',
-                        marginTop: '-350px',
+                        height: '2500px',
+                        marginTop: '-850px',
                         border: 'none',
                         width: '100%'
                     }}
