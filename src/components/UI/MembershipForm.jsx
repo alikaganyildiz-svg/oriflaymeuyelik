@@ -8,7 +8,7 @@ const MembershipForm = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     return (
-        <div className="relative w-full h-[800px] bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div className="relative w-full bg-white rounded-2xl shadow-xl overflow-hidden" style={{ height: '2500px' }}>
             {isLoading && (
                 <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-white">
                     <Loader2 className="animate-spin text-primary mb-2" size={32} />
@@ -17,7 +17,7 @@ const MembershipForm = () => {
             )}
             <iframe
                 src={registrationUrl}
-                scrolling="yes"
+                scrolling="no"
                 loading="eager"
                 onLoad={() => setIsLoading(false)}
                 frameBorder="0"
