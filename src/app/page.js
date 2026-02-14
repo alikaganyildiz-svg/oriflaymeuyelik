@@ -1,6 +1,5 @@
 
 import Hero from '@/components/UI/Hero';
-import Hero from '@/components/UI/Hero';
 
 export const metadata = {
   title: 'Oriflame Üyelik ve Kayıt | Oriflame Katalog & Sermayesiz İş',
