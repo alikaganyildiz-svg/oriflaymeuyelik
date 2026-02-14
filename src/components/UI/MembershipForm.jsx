@@ -8,7 +8,7 @@ const MembershipForm = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     return (
-        <div className="relative w-full overflow-hidden rounded-2xl shadow-xl bg-white" style={{ height: '1325px' }}>
+        <div className="relative w-full overflow-hidden rounded-2xl shadow-xl bg-white" style={{ height: '2200px' }}>
             {isLoading && (
                 <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-white">
                     <Loader2 className="animate-spin text-primary mb-2" size={32} />
@@ -25,7 +25,7 @@ const MembershipForm = () => {
                     frameBorder="0"
                     className="w-full animate-fade-in"
                     style={{
-                        height: '2700px',
+                        height: '3220px',
                         marginTop: '-1020px',
                         border: 'none',
                         width: '100%'
