@@ -96,12 +96,11 @@ const Catalog = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary font-bold text-xs uppercase tracking-widest rounded-full mb-4">
-                        Online Kataloglar
+                        Oriflame Katalogları
                     </span>
                     <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">Oriflame Dünyasını Keşfet</h1>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        İsterseniz mevcut ayın fırsatlarını yakalayın, isterseniz gelecek ayın sürprizlerine şimdiden göz atın.
-                        Dijital kataloglarımızla alışveriş keyfini her an yanınızda taşıyın.
+                        İsterseniz mevcut ayın fırsatlarını yakalayın, isterseniz gelecek ayın sürprizlerine şimdiden göz atın. Dijital Oriflame katalogları ile alışveriş keyfini her an yanınızda taşırken, beğendiğiniz ürünlere çok daha avantajlı fiyatlarla sahip olmak için hemen Oriflame üye ol fırsatını değerlendirin. Sadece birkaç dakikanızı alacak ücretsiz Oriflame kayıt işleminin ardından, harcadıkça kazandıran Oriflame üyelik dünyasının ayrıcalıklarını anında yaşamaya başlayabilirsiniz.
                     </p>
                 </div>
 
@@ -140,9 +139,35 @@ const Catalog = () => {
 
                 <div className="mt-20 bg-white rounded-2xl p-10 shadow-lg text-center max-w-4xl mx-auto border border-gray-100">
                     <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">Ürünleri İndirimli Almak İster misiniz?</h2>
-                    <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-                        Katalogdaki fiyatlar üzerinden ekstra %30 indirim kazanmak ve sürpriz hediyelere sahip olmak için hemen ücretsiz üye olun.
-                    </p>
+                    <div className="text-left space-y-6 text-gray-600 mb-8 max-w-3xl mx-auto">
+                        <p>
+                            <strong>Oriflame Katalogları ile Keşfedin, %15 İndirimli Alın!</strong>
+                        </p>
+                        <p>
+                            En yeni Oriflame katalogları, doğanın ve bilimin harmanlandığı yüzlerce ürünü keşfetmeniz için her ay yenilenen fırsatlarla doludur. Ancak katalogda gördüğünüz fiyatlar, ödeyeceğiniz son fiyat değildir! Hemen Oriflame üye ol adımını tamamlayarak, beğendiğiniz ürünlere katalog fiyatı üzerinden ekstra indirimlerle sahip olabileceğinizi biliyor muysunuz?
+                        </p>
+                        <p>
+                            Güncel Oriflame katalogları sayfalarını çevirirken sadece ürünleri incelemekle kalmayın; avantajlı Oriflame üyelik sistemine dahil olarak akıllı alışverişin keyfini çıkarın. Ücretsiz Oriflame kayıt işleminizi yaptığınız andan itibaren katalog fiyatları sizin için değişir ve çok daha kârlı hale gelir.
+                        </p>
+                        <h3 className="font-bold text-lg text-gray-800 pt-4">Neden Oriflame Katalogları Üzerinden Sipariş Vermelisiniz?</h3>
+                        <p>
+                            Sadece bir izleyici olmak yerine, bu kazançlı dünyanın ayrıcalıklı bir parçası olduğunuzda şu harika avantajları elde edersiniz:
+                        </p>
+                        <ul className="list-disc pl-5 space-y-2">
+                            <li>
+                                <strong>Etiket Fiyatına Aldanmayın (%15 İndirim):</strong> Katalogda gördüğünüz fiyat ne olursa olsun, sepette anında %15 indirim kazanırsınız.
+                            </li>
+                            <li>
+                                <strong>Kargo Bedava Fırsatı:</strong> Oriflame kataloglarından seçtiğiniz ürünlerle oluşturduğunuz 1000 TL ve üzeri ilk siparişinizde kargo ücreti ödemezsiniz.
+                            </li>
+                            <li>
+                                <strong>Harcadıkça Kazandıran Sistem (Nakit İade):</strong> Fatura tutarınızın %15'i nakit iade (Cashback) olarak Oriflame cüzdanınıza geri döner. Bu tutarı bir sonraki Oriflame üyelik alışverişinizde indirim olarak kullanabilirsiniz.
+                            </li>
+                        </ul>
+                        <p className="pt-4">
+                            Siz de hemen şimdi en güncel Oriflame kataloglarını incelemeye başlayın, dakikalar içinde ücretsiz Oriflame kayıt formunu doldurun ve güzelliğinize yatırım yaparken bütçenizi koruyun!
+                        </p>
+                    </div>
                     <a href="/#basvuru" className="inline-flex items-center space-x-2 text-primary font-bold border-b-2 border-primary pb-1 hover:text-green-800 transition-colors">
                         <span>Ücretsiz Üyelik Formuna Git</span>
                         <ArrowRight size={18} />
