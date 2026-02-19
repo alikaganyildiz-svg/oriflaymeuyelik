@@ -15,13 +15,13 @@ const InfoSection = () => {
         },
         {
             icon: <TrendingUp className="w-8 h-8 text-secondary" />,
-            title: "Yüksek Kazanç",
-            desc: "%30 anında satış kârı ve %24'e varan performans primleri ile gelirini kendin belirle."
+            title: "%15 Para İadesi",
+            desc: "Her alışverişte Oriflame Cüzdan'a anında iade"
         },
         {
             icon: <ShieldCheck className="w-8 h-8 text-secondary" />,
             title: "%100 Güven",
-            desc: "Memnuniyet garantisi, kolay iade ve güvenilir ödeme seçenekleri ile risksiz iş fırsatı."
+            desc: "Memnuniyet garantisi, kolay iade ve güvenilir ödeme seçenekleri ile iş fırsatı."
         }
     ];
 

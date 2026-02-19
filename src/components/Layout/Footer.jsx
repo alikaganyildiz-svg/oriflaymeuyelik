@@ -10,7 +10,7 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-bold mb-6 font-serif">Hakkımızda</h3>
                         <ul className="space-y-3 text-sm text-gray-400">
-                            <li><a href="#" className="hover:text-white transition-colors">Oriflame Hakkında</a></li>
+                            <li><a href="https://www.oriflayme.com/" className="hover:text-white transition-colors">Oriflame</a></li>
                             <li><a href="#" className="hover:text-white transition-colors">Sürdürülebilirlik</a></li>
                             <li><a href="#" className="hover:text-white transition-colors">Kariyer</a></li>
                             <li><a href="#" className="hover:text-white transition-colors">Yatırımcı İlişkileri</a></li>

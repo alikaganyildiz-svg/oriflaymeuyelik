@@ -57,6 +57,12 @@ const Hero = () => {
                                 İster kendi ihtiyaçlarınızı indirimli almak için, ister <strong>sermayesiz iş</strong> kurarak ek gelir elde etmek için Oriflame avantajlarından faydalanabilirsiniz.
                             </p>
                         </div>
+
+                        {/* FAQ Section - Moved to Left Column */}
+                        <div className="mt-12 text-left bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                            <h2 className="text-2xl font-serif font-bold text-gray-900 mb-6">Merak Ettikleriniz</h2>
+                            <FAQ />
+                        </div>
                     </div>
 
                     {/* Right Column: Iframe Form */}
@@ -75,39 +81,38 @@ const Hero = () => {
 
                 </div>
 
-                {/* FAQ Section - Full Width Below */}
-                <div className="mt-20 max-w-4xl mx-auto text-left bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                    <h2 className="text-2xl font-serif font-bold text-gray-900 mb-6 text-center">Merak Ettikleriniz</h2>
-                    <FAQ />
-                </div>
-
                 {/* SEO Content Block (Rest of content) */}
-                <div className="space-y-12 text-gray-700 leading-relaxed text-lg max-w-4xl mx-auto pt-20 text-left">
-                    {/* ... Keeping existing content ... */}
-                    <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-12 text-gray-700 leading-relaxed text-sm max-w-7xl mx-auto pt-20 text-left">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div className="bg-white p-6 rounded-xl shadow-sm">
-                            <h2 className="text-2xl font-serif font-bold text-gray-900 mb-3">Katalog ile Kazanç</h2>
-                            <p>
-                                Her ay yenilenen <strong>Oriflame katalog</strong>, binlerce kozmetik, cilt bakımı ve wellness ürününü beğeninize sunar.
-                                Kataloğu çevrenizle paylaşarak sipariş toplayabilir, satışlarınızdan anında kâr elde edebilirsiniz.
-                            </p>
+                            <h2 className="text-lg font-serif font-bold text-gray-900 mb-3">Oriflame Üyelik & Kayıt</h2>
+                            <ul className="space-y-3 mt-2">
+                                <li className="flex items-start"><span className="text-primary mr-2">✓</span> <span>Oriflame Dünyasına Adım Atın: Ücretsiz Üyelik ve Kayıt, Anında %15 İndirim.</span></li>
+                                <li className="flex items-start"><span className="text-primary mr-2">✓</span> <span>Ayrıcalıklı Müşteri Olmak Çok Kolay, Kazanmaya Başlamak Bir Tık Uzağınızda.</span></li>
+                                <li className="flex items-start"><span className="text-primary mr-2">✓</span> <span>Oriflame Üyeliği ile Güzellik Sırlarına ve Özel İndirimlere Kapı Aralayın.</span></li>
+                            </ul>
                         </div>
 
                         <div className="bg-white p-6 rounded-xl shadow-sm">
-                            <h2 className="text-2xl font-serif font-bold text-gray-900 mb-3">Üyelik Avantajları</h2>
+                            <h2 className="text-lg font-serif font-bold text-gray-900 mb-3">Katalog ile Kazanç</h2>
                             <ul className="space-y-3 mt-2">
-                                <li className="flex items-start"><span className="text-primary mr-2">✓</span> <span><strong>Ücretsiz Başlangıç:</strong> Hiçbir ücret ödemeden sisteme dahil olun.</span></li>
-                                <li className="flex items-start"><span className="text-primary mr-2">✓</span> <span><strong>İndirimli Alışveriş:</strong> Tüm ürünlere özel indirimlerle sahip olun.</span></li>
-                                <li className="flex items-start"><span className="text-primary mr-2">✓</span> <span><strong>Hoşgeldin Hediyeleri:</strong> Başlangıç setleri kazanın.</span></li>
+                                <li className="flex items-start"><span className="text-primary mr-2">✓</span> <span>Yeni Oriflame Kataloğunu Keşfedin, Favori Ürünlerinizi %15 İndirimle Alın.</span></li>
+                                <li className="flex items-start"><span className="text-primary mr-2">✓</span> <span>Doğanın Gücü Sayfalarda: En Güncel Kataloğu Hemen İnceleyin.</span></li>
+                                <li className="flex items-start"><span className="text-primary mr-2">✓</span> <span>Aradığınız Güzellik Burada: Kataloğa Göz Atın, Fırsatları Yakalayın.</span></li>
+                            </ul>
+                        </div>
+
+                        <div className="bg-white p-6 rounded-xl shadow-sm">
+                            <h2 className="text-lg font-serif font-bold text-gray-900 mb-3">Üyelik Avantajları</h2>
+                            <ul className="space-y-3 mt-2">
+                                <li className="flex items-start"><span className="text-primary mr-2">✓</span> <span>Akıllı Alışverişin Formülü: %15 İndirim + %15 Cüzdan İadesi!</span></li>
+                                <li className="flex items-start"><span className="text-primary mr-2">✓</span> <span>Güzelliğinize Harcarken Cüzdanınızı Doldurun.</span></li>
+                                <li className="flex items-start"><span className="text-primary mr-2">✓</span> <span>İlk Siparişinize Özel Kargo Bizden, Güzellik Sizden.</span></li>
                             </ul>
                         </div>
                     </div>
 
-                    <div className="text-center pt-8">
-                        <p className="italic text-gray-500">
-                            Hayallerinizi ertelemeyin, kazanmaya bugün başlayın!
-                        </p>
-                    </div>
+
                 </div>
 
             </div>

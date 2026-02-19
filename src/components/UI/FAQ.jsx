@@ -33,20 +33,19 @@ const FAQ = () => {
         },
         {
             question: "Her ay sipariş verme zorunluluğu var mı?",
-            answer: "Hayır, Oriflame'de satış kotası veya zorunlu sipariş yoktur. Kendi ihtiyaçlarınız için indirimli alışveriş yapabilir veya satış yaparak kazanç sağlayabilirsiniz. Ancak 12 ay boyunca hiç sipariş vermezseniz üyeliğiniz düşer."
+            answer: "Hayır, Oriflame'de satış kotası veya zorunlu sipariş yoktur. Kendi ihtiyaçlarınız için indirimli alışveriş yapabilir veya satış yaparak kazanç sağlayabilirsiniz."
         },
-        {
-            question: "Ne kadar kazanabilirim?",
-            answer: "Kazancınız tamamen performansınıza bağlıdır. %30 satış kârının yanı sıra, ekibinizi kurarak %4 ile %24 arasında performans iskontosu kazanabilirsiniz. Üst seviyelerde (Direktörlük vb.) aylık min. 8.000 TL ve üzeri gelir elde edebilirsiniz."
-        },
+
+
         {
             question: "Ürün iadesi yapabilir miyim?",
-            answer: "Evet, Oriflame müşteri memnuniyeti garantisi sunar. Ürünleri kullanmış olsanız dahi, memnun kalmazsanız belirli bir süre içerisinde iade edebilir ve paranızı geri alabilirsiniz."
+            answer: "Evet, Oriflame müşteri memnuniyeti garantisi sunar. Kullandığınız ürünler cildinize yaramazsa ürünü iade edebilirsiniz. Renkli kozmetik ve parfümlerde ambalaj açıldığında ürün iadesi kabul edilmemektedir."
         },
         {
-            question: "Hoşgeldin hediyeleri nelerdir?",
-            answer: "Yeni üyelere özel 'Hoşgeldin Programı' kapsamında ilk 3 ayınızda vereceğiniz siparişlerde çok özel fiyatlarla parfüm ve bakım setleri kazanma şansınız vardır. Hediyeler dönemsel olarak değişebilir."
+            question: "Oriflame ayrıcalıklı müşteri olmanın avantajları nelerdir?",
+            answer: "Kayıt olduğunuz an ayrıcalıklı müşteri olarak sisteme dahil olursunuz. Ayrıcalıklı müşterilerin avantajları, sipariş verdiklerinde %15 indirim kazanırsınız. 1000TL üzeri ilk siparişinizde ücretsiz kargo hakkı kazanırsınız ayrıca fatura tutarınızın %15'i kadar para iadesini Oriflame cüzdanınıza iade alırsınız."
         }
+
     ];
 
     return (
