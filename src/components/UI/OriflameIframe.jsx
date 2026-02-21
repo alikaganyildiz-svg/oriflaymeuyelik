@@ -16,11 +16,11 @@ const OriflameIframe = () => {
           src="https://tr.oriflame.com/business-opportunity/become-consultant?store=TR-kagan2532287006"
           className="border-0"
           style={{
-            width: '105.5%',
-            height: '1950px',
-            transform: 'scale(0.95)',
+            width: '111.1%',
+            height: '2050px',
+            transform: 'scale(0.90)',
             transformOrigin: 'top left',
-            marginTop: '-190px'
+            marginTop: '-200px'
           }}
           title="Oriflame Kayıt Formu"
           loading="lazy"
