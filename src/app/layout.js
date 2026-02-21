@@ -3,6 +3,7 @@ import { Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
+import Breadcrumbs from "@/components/UI/Breadcrumbs";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         className={`${outfit.variable} ${playfair.variable} antialiased font-sans`}
       >
         <Header />
+        <Breadcrumbs />
         <main>
           {children}
         </main>
