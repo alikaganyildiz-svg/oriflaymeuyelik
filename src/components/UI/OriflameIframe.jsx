@@ -1,8 +1,32 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect, useRef } from 'react';
 
 const OriflameIframe = () => {
+  const [shouldLoad, setShouldLoad] = useState(false);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    // Advanced lazy-loading: Only load when the user is within 300px of scrolling to the form
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setShouldLoad(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '300px' }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="w-full h-[1675px] overflow-hidden rounded-xl shadow-2xl border border-gray-200 bg-white relative">
+    <div ref={containerRef} className="w-full h-[1675px] overflow-hidden rounded-xl shadow-2xl border border-gray-200 bg-white relative">
       <div className="absolute top-0 left-0 w-full h-14 bg-primary flex items-center justify-center border-b border-primary/10 z-10">
         <h3 className="text-white font-bold text-lg tracking-wide uppercase">Oriflame Ücretsiz Üyelik</h3>
       </div>
@@ -12,21 +36,32 @@ const OriflameIframe = () => {
         and start exactly at "Marka Ortağı olun".
       */}
       <div className="w-full h-[1685px] pt-14 overflow-hidden bg-white relative">
-        <iframe
-          src="https://tr.oriflame.com/business-opportunity/become-consultant?store=TR-kagan2532287006"
-          className="border-0"
-          style={{
-            width: '111.1%',
-            height: '2135px',
-            transform: 'scale(0.90)',
-            transformOrigin: 'top left',
-            marginTop: '-200px'
-          }}
-          title="Oriflame Kayıt Formu"
-          loading="lazy"
-          scrolling="no"
-          sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
-        />
+        {/* Loading Spinner */}
+        {!shouldLoad && (
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-50/50 z-0">
+            <div className="w-10 h-10 border-4 border-primary/30 border-t-primary rounded-full animate-spin mb-3"></div>
+            <p className="text-gray-500 font-medium animate-pulse">Kayıt Formu Yükleniyor...</p>
+          </div>
+        )}
+
+        {/* The actual Heavy Iframe, only loaded when needed */}
+        {shouldLoad && (
+          <iframe
+            src="https://tr.oriflame.com/business-opportunity/become-consultant?store=TR-kagan2532287006"
+            className="border-0 relative z-10"
+            style={{
+              width: '111.1%',
+              height: '2135px',
+              transform: 'scale(0.90)',
+              transformOrigin: 'top left',
+              marginTop: '-200px'
+            }}
+            title="Oriflame Kayıt Formu"
+            loading="lazy"
+            scrolling="no"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+          />
+        )}
       </div>
 
       {/* Overlay to hide the live support button on the bottom right without blocking clicks to the cookie banner */}
