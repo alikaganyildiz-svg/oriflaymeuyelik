@@ -37,6 +37,9 @@ export const metadata = {
     title: "Oriflame Ücretsiz Üyelik & Türkiye Online Katalog",
     description: "Oriflame dünyasına katılın, sermayesiz iş fırsatıyla ücretsiz kayıt olun.",
   },
+  verification: {
+    google: '1D4WInyfv7-8zWsZqnypQXXdBbsnz_XjzDUvYfwF99k',
+  },
 };
 
 export default function RootLayout({ children }) {
