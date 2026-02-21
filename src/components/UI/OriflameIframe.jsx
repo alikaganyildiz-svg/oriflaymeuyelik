@@ -14,7 +14,14 @@ const OriflameIframe = () => {
       <div className="w-full h-[1600px] pt-14 overflow-hidden bg-white relative">
         <iframe
           src="https://tr.oriflame.com/business-opportunity/become-consultant?store=TR-kagan2532287006"
-          className="w-full h-[1850px] border-0 -mt-[180px]"
+          className="border-0"
+          style={{
+            width: '105.5%',
+            height: '1950px',
+            transform: 'scale(0.95)',
+            transformOrigin: 'top left',
+            marginTop: '-190px'
+          }}
           title="Oriflame Kayıt Formu"
           loading="lazy"
           scrolling="no"
