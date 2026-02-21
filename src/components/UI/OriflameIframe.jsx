@@ -2,8 +2,8 @@ import React from 'react';
 
 const OriflameIframe = () => {
   return (
-    <div className="w-full h-[1500px] overflow-hidden rounded-xl shadow-2xl border border-gray-200 bg-white relative">
-      <div className="absolute top-0 left-0 w-full h-14 bg-primary flex items-center justify-center border-b border-primary/10">
+    <div className="w-full h-[1550px] overflow-hidden rounded-xl shadow-2xl border border-gray-200 bg-white relative">
+      <div className="absolute top-0 left-0 w-full h-14 bg-primary flex items-center justify-center border-b border-primary/10 z-10">
         <h3 className="text-white font-bold text-lg tracking-wide uppercase">Oriflame Ücretsiz Üyelik</h3>
       </div>
 
@@ -11,10 +11,10 @@ const OriflameIframe = () => {
         Container for the iframe with negative margin to crop out the top navigation 
         and start exactly at "Marka Ortağı olun".
       */}
-      <div className="w-full h-[1550px] pt-14 overflow-hidden bg-white relative">
+      <div className="w-full h-[1600px] pt-14 overflow-hidden bg-white relative">
         <iframe
           src="https://tr.oriflame.com/business-opportunity/become-consultant?store=TR-kagan2532287006"
-          className="w-full h-[1800px] border-0 -mt-[180px]"
+          className="w-full h-[1850px] border-0 -mt-[180px]"
           title="Oriflame Kayıt Formu"
           loading="lazy"
           scrolling="no"
