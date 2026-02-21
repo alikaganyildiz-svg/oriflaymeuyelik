@@ -2,7 +2,7 @@ import React from 'react';
 
 const OriflameIframe = () => {
   return (
-    <div className="w-full h-[1400px] overflow-hidden rounded-xl shadow-2xl border border-gray-200 bg-white relative">
+    <div className="w-full h-[950px] overflow-hidden rounded-xl shadow-2xl border border-gray-200 bg-white relative">
       <div className="absolute top-0 left-0 w-full h-14 bg-primary flex items-center justify-center border-b border-primary/10">
         <h3 className="text-white font-bold text-lg tracking-wide uppercase">Oriflame Ücretsiz Üyelik</h3>
       </div>
@@ -16,11 +16,11 @@ const OriflameIframe = () => {
           src="https://tr.oriflame.com/business-opportunity/become-consultant?store=TR-kagan2532287006"
           className="border-0"
           style={{
-            width: '125%',
-            height: '2345px',
-            transform: 'scale(0.8)',
+            width: '200%',
+            height: '3750px',
+            transform: 'scale(0.5)',
             transformOrigin: 'top left',
-            marginTop: '-150px'
+            marginTop: '-240px'
           }}
           title="Oriflame Kayıt Formu"
           loading="lazy"
