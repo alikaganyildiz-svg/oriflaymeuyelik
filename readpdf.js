@@ -1,10 +1,10 @@
 const fs = require('fs');
-const pdf = require('pdf-parse');
+const PDFParser = require('pdf2json');
+const pdfParser = new PDFParser(this, 1);
 
-const dataBuffer = fs.readFileSync('PageSpeed Insights.pdf');
-
-pdf(dataBuffer).then(function (data) {
-    console.log(data.text);
-}).catch(err => {
-    console.error("Error reading pdf:", err);
+pdfParser.on('pdfParser_dataReady', pdfData => {
+    fs.writeFileSync('parsed_pdf.txt', pdfParser.getRawTextContent());
+    console.log("Saved to parsed_pdf.txt");
 });
+
+pdfParser.loadPDF('PageSpeed Insights.pdf');

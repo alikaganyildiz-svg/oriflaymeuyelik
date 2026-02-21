@@ -7,22 +7,38 @@ const OriflameIframe = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    // Advanced lazy-loading: Only load when the user is within 300px of scrolling to the form
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setShouldLoad(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: '300px' }
-    );
+    // Çok Gelişmiş Tembel Yükleme: 
+    // Masaüstünde form ekranın hemen sağında (above the fold) olduğu için PageSpeed botları 
+    // anında formu yüklemeye çalışıp "Total Blocking Time" hatası veriyor.
+    // Bunu engellemek için sadece kullanıcı sayfayla etkileşime girdiğinde (kaydırma, fare hareketi vs.)
+    // VEYA 4 saniye sonra formu yüklüyoruz.
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
+    let loadingTimer;
 
-    return () => observer.disconnect();
+    const triggerLoad = () => {
+      setShouldLoad(true);
+      window.removeEventListener('scroll', triggerLoad);
+      window.removeEventListener('mousemove', triggerLoad);
+      window.removeEventListener('touchstart', triggerLoad);
+      if (loadingTimer) clearTimeout(loadingTimer);
+    };
+
+    // Kullanıcı etkileşimlerini dinle (Sadece 1 kere çalış, sonra kendini temizle)
+    window.addEventListener('scroll', triggerLoad, { once: true, passive: true });
+    window.addEventListener('mousemove', triggerLoad, { once: true, passive: true });
+    window.addEventListener('touchstart', triggerLoad, { once: true, passive: true });
+
+    // Hiçbir etkileşim olmazsa 4 saniye sonra mecburi yükle
+    loadingTimer = setTimeout(() => {
+      triggerLoad();
+    }, 4000);
+
+    return () => {
+      if (loadingTimer) clearTimeout(loadingTimer);
+      window.removeEventListener('scroll', triggerLoad);
+      window.removeEventListener('mousemove', triggerLoad);
+      window.removeEventListener('touchstart', triggerLoad);
+    };
   }, []);
 
   return (
