@@ -19,6 +19,24 @@ export async function generateMetadata({ params }) {
         title: `${post.title} | Oriflame Blog`,
         description: post.excerpt,
         openGraph: {
+            title: `${post.title} | Oriflame Blog`,
+            description: post.excerpt,
+            url: `/blog/${slug}`,
+            type: 'article',
+            publishedTime: post.date,
+            images: [
+                {
+                    url: post.image,
+                    width: 1200,
+                    height: 630,
+                    alt: post.title,
+                }
+            ],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: `${post.title} | Oriflame Blog`,
+            description: post.excerpt,
             images: [post.image],
         },
     };
@@ -34,6 +52,26 @@ export default async function BlogPostPage({ params }) {
 
     return (
         <div className="min-h-screen bg-gray-50 pb-20">
+            {/* JSON-LD Article Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Article",
+                        "headline": post.title,
+                        "image": [
+                            post.image || 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=2000'
+                        ],
+                        "datePublished": post.date,
+                        "dateModified": post.date,
+                        "author": [{
+                            "@type": "Organization",
+                            "name": "Oriflame Türkiye"
+                        }]
+                    })
+                }}
+            />
             {/* Simple Header for Navigation */}
             <div className="bg-white border-b border-gray-100 sticky top-0 z-50">
                 <div className="container mx-auto px-4 py-4">

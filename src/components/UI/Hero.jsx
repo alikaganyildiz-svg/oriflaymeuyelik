@@ -12,6 +12,7 @@ const Hero = () => {
                     src="https://images.unsplash.com/photo-1596462502278-27bfdd403348?q=80&w=2070&auto=format&fit=crop"
                     alt="Oriflame Background"
                     fill
+                    priority={true}
                     className="object-cover opacity-15 filter blur-sm"
                     sizes="100vw"
                 />
