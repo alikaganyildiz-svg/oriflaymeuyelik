@@ -2,22 +2,22 @@ import React from 'react';
 
 const OriflameIframe = () => {
   return (
-    <div className="w-full h-[1425px] overflow-hidden rounded-xl shadow-2xl border border-gray-200 bg-white relative">
+    <div className="w-full h-[1500px] overflow-hidden rounded-xl shadow-2xl border border-gray-200 bg-white relative">
       <div className="absolute top-0 left-0 w-full h-14 bg-primary flex items-center justify-center border-b border-primary/10">
         <h3 className="text-white font-bold text-lg tracking-wide uppercase">Oriflame Ücretsiz Üyelik</h3>
       </div>
 
       {/* 
-        Container for the iframe with negative margin to "crop" the header.
-        Adjust -mt value to show "Hesap Detayları".
+        Container for the iframe. Scrolling is enabled so users can see 
+        all parts of the form without it getting completely cut off.
       */}
-      <div className="w-full h-full pt-14 overflow-hidden bg-white">
+      <div className="w-full h-full pt-14 bg-white relative">
         <iframe
           src="https://tr.oriflame.com/business-opportunity/become-consultant?store=TR-kagan2532287006"
-          className="w-full h-[1875px] border-0 -mt-[120px]"
+          className="w-full h-full border-0"
           title="Oriflame Kayıt Formu"
           loading="lazy"
-          scrolling="no"
+          scrolling="yes"
           sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
         />
       </div>
