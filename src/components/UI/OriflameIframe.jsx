@@ -2,7 +2,7 @@ import React from 'react';
 
 const OriflameIframe = () => {
   return (
-    <div className="w-full h-[1685px] overflow-hidden rounded-xl shadow-2xl border border-gray-200 bg-white relative">
+    <div className="w-full h-[1675px] overflow-hidden rounded-xl shadow-2xl border border-gray-200 bg-white relative">
       <div className="absolute top-0 left-0 w-full h-14 bg-primary flex items-center justify-center border-b border-primary/10 z-10">
         <h3 className="text-white font-bold text-lg tracking-wide uppercase">Oriflame Ücretsiz Üyelik</h3>
       </div>
