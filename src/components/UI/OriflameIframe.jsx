@@ -22,8 +22,9 @@ const OriflameIframe = () => {
         />
       </div>
 
-      {/* Overlay to hide the footer or other unwanted bottom elements if needed, 
-          but usually scrolling is fine. */}
+      {/* Overlay to hide the live support button on the bottom right and block clicks */}
+      <div className="absolute bottom-0 right-0 w-32 h-32 bg-white z-20 rounded-tl-2xl hidden md:block"></div>
+      <div className="absolute bottom-0 right-0 w-24 h-24 bg-white z-20 rounded-tl-2xl md:hidden"></div>
     </div>
   );
 };
