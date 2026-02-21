@@ -11,10 +11,10 @@ const OriflameIframe = () => {
         Container for the iframe with negative margin to "crop" the header.
         Adjust -mt value to show "Hesap Detayları".
       */}
-      <div className="w-full h-full pt-14 overflow-hidden">
+      <div className="w-full h-full pt-14 overflow-hidden bg-white">
         <iframe
-          src="https://tr.oriflame.com/mypages/business-tools/recruit/register-new-vip?store=TR-kagan2532287006"
-          className="w-full h-[2600px] border-0 -mt-[480px]"
+          src="https://tr.oriflame.com/business-opportunity/become-consultant?store=TR-kagan2532287006"
+          className="w-full h-[1850px] border-0 -mt-[120px]"
           title="Oriflame Kayıt Formu"
           loading="lazy"
           scrolling="no"
