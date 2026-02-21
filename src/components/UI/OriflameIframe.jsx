@@ -8,16 +8,16 @@ const OriflameIframe = () => {
       </div>
 
       {/* 
-        Container for the iframe. Scrolling is enabled so users can see 
-        all parts of the form without it getting completely cut off.
+        Container for the iframe with negative margin to crop out the top navigation 
+        and start exactly at "Marka Ortağı olun".
       */}
-      <div className="w-full h-full pt-14 bg-white relative">
+      <div className="w-full h-[1550px] pt-14 overflow-hidden bg-white relative">
         <iframe
           src="https://tr.oriflame.com/business-opportunity/become-consultant?store=TR-kagan2532287006"
-          className="w-full h-full border-0"
+          className="w-full h-[1800px] border-0 -mt-[180px]"
           title="Oriflame Kayıt Formu"
           loading="lazy"
-          scrolling="yes"
+          scrolling="no"
           sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
         />
       </div>
