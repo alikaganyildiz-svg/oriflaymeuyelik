@@ -1,88 +1,63 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 
 const OriflameIframe = () => {
-  const [shouldLoad, setShouldLoad] = useState(false);
-  const containerRef = useRef(null);
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Çok Gelişmiş Tembel Yükleme: 
-    // Masaüstünde form ekranın hemen sağında (above the fold) olduğu için PageSpeed botları 
-    // anında formu yüklemeye çalışıp "Total Blocking Time" hatası veriyor.
-    // Bunu engellemek için sadece kullanıcı sayfayla etkileşime girdiğinde (kaydırma, fare hareketi vs.)
-    // VEYA 4 saniye sonra formu yüklüyoruz.
+  // The "Blog Mode" Secret:
+  // Using "?sc_device=Blog" tells Oriflame's server to natively hide its header and footer!
+  // By setting the iframe height to 2500px, we fit the entire form natively, 
+  // eliminating the inner scrollbar. The user simply uses the main page scrollbar.
+  // The Cookie Popup will naturally appear at the bottom of this 2500px area.
 
-    let loadingTimer;
-
-    const triggerLoad = () => {
-      setShouldLoad(true);
-      window.removeEventListener('scroll', triggerLoad);
-      window.removeEventListener('mousemove', triggerLoad);
-      window.removeEventListener('touchstart', triggerLoad);
-      if (loadingTimer) clearTimeout(loadingTimer);
-    };
-
-    // Kullanıcı etkileşimlerini dinle (Sadece 1 kere çalış, sonra kendini temizle)
-    window.addEventListener('scroll', triggerLoad, { once: true, passive: true });
-    window.addEventListener('mousemove', triggerLoad, { once: true, passive: true });
-    window.addEventListener('touchstart', triggerLoad, { once: true, passive: true });
-
-    // Hiçbir etkileşim olmazsa 4 saniye sonra mecburi yükle
-    loadingTimer = setTimeout(() => {
-      triggerLoad();
-    }, 4000);
-
-    return () => {
-      if (loadingTimer) clearTimeout(loadingTimer);
-      window.removeEventListener('scroll', triggerLoad);
-      window.removeEventListener('mousemove', triggerLoad);
-      window.removeEventListener('touchstart', triggerLoad);
-    };
-  }, []);
+  const ORIFLAME_URL =
+    'https://tr.oriflame.com/business-opportunity/become-consultant?store=TR-kagan2532287006&sc_device=Blog';
 
   return (
-    <div ref={containerRef} className="w-full h-[1675px] overflow-hidden rounded-xl shadow-2xl border border-gray-200 bg-white relative">
-      <div className="absolute top-0 left-0 w-full h-14 bg-primary flex items-center justify-center border-b border-primary/10 z-10">
-        <h3 className="text-white font-bold text-lg tracking-wide uppercase">Oriflame Ücretsiz Üyelik</h3>
+    <div className="relative w-full rounded-2xl shadow-xl border border-gray-100 bg-white overflow-hidden mb-8">
+
+      {/* ── CUSTOM HEADER ── */}
+      <div
+        className="w-full bg-primary flex flex-col items-center justify-center py-6 shadow-sm border-b border-primary/20"
+      >
+        <h3 className="text-white font-bold text-2xl tracking-wide uppercase">
+          Ücretsiz Kayıt Formu
+        </h3>
+        <p className="text-white/90 text-sm mt-1 font-medium tracking-wider">
+          GÜVENLİ & DOĞRUDAN BAĞLANTI
+        </p>
       </div>
 
-      {/* 
-        Container for the iframe with negative margin to crop out the top navigation 
-        and start exactly at "Marka Ortağı olun".
-      */}
-      <div className="w-full h-[1685px] pt-14 overflow-hidden bg-white relative">
-        {/* Loading Spinner */}
-        {!shouldLoad && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-50/50 z-0">
-            <div className="w-10 h-10 border-4 border-primary/30 border-t-primary rounded-full animate-spin mb-3"></div>
-            <p className="text-gray-500 font-medium animate-pulse">Kayıt Formu Yükleniyor...</p>
-          </div>
-        )}
+      {/* ── LOADING SPINNER ── */}
+      {loading && (
+        <div
+          className="w-full flex flex-col items-center justify-center bg-gray-50/90 py-32"
+        >
+          <div className="w-12 h-12 border-4 border-primary/20 border-t-primary rounded-full animate-spin mb-4" />
+          <p className="text-gray-600 font-medium animate-pulse">Oriflame Formu Yükleniyor...</p>
+        </div>
+      )}
 
-        {/* The actual Heavy Iframe, only loaded when needed */}
-        {shouldLoad && (
-          <iframe
-            src="https://tr.oriflame.com/business-opportunity/become-consultant?store=TR-kagan2532287006"
-            className="border-0 relative z-10"
-            style={{
-              width: '111.1%',
-              height: '2135px',
-              transform: 'scale(0.90)',
-              transformOrigin: 'top left',
-              marginTop: '-200px'
-            }}
-            title="Oriflame Kayıt Formu"
-            loading="lazy"
-            scrolling="no"
-            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
-          />
-        )}
+      {/* ── NATIVE IFRAME ── */}
+      <div className={`relative w-full bg-white transition-opacity duration-500 overflow-hidden ${loading ? 'opacity-0' : 'opacity-100'}`}>
+        <iframe
+          src={ORIFLAME_URL}
+          onLoad={() => setLoading(false)}
+          className="w-full border-0 relative z-10"
+          style={{
+            height: '1970px', // Compensating the 180px shift + dynamic errors
+            marginTop: '-160px', // Hides the "Marka Ortağı olun" and description text
+            marginBottom: '-160px' // Balances the height so container isn't excessively tall
+          }}
+          scrolling="no"
+          title="Oriflame Kayıt"
+          loading="lazy"
+        />
+        {/* Alttaki istenmeyen harfleri/footer kırpıntılarını gizleyen beyaz bant */}
+        <div className="absolute bottom-0 left-0 w-full h-10 bg-white z-20 pointer-events-none" />
       </div>
 
-      {/* Overlay to hide the live support button on the bottom right without blocking clicks to the cookie banner */}
-      <div className="absolute bottom-0 right-0 w-24 h-24 bg-white z-20 rounded-tl-2xl pointer-events-none hidden md:block"></div>
-      <div className="absolute bottom-0 right-0 w-20 h-20 bg-white z-20 rounded-tl-2xl pointer-events-none md:hidden"></div>
     </div>
   );
 };
