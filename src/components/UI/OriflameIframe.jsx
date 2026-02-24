@@ -46,7 +46,7 @@ const OriflameIframe = () => {
           onLoad={() => setLoading(false)}
           className="w-full border-0 relative z-10"
           style={{
-            height: '1970px', // Compensating the 180px shift + dynamic errors
+            height: '1990px', // Compensating the 180px shift + dynamic errors
             marginTop: '-160px', // Hides the "Marka Ortağı olun" and description text
             marginBottom: '-160px' // Balances the height so container isn't excessively tall
           }}
