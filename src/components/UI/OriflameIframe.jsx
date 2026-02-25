@@ -1,15 +1,42 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const OriflameIframe = () => {
   const [loading, setLoading] = useState(true);
 
-  // The "Blog Mode" Secret:
-  // Using "?sc_device=Blog" tells Oriflame's server to natively hide its header and footer!
-  // By setting the iframe height to 2500px, we fit the entire form natively, 
-  // eliminating the inner scrollbar. The user simply uses the main page scrollbar.
-  // The Cookie Popup will naturally appear at the bottom of this 2500px area.
+  // Responsive iframe style values based on window width.
+  // On mobile the Oriflame form reflows to a taller single-column layout,
+  // so height and crop margins need to be adjusted per breakpoint.
+  const [iframeStyle, setIframeStyle] = useState({
+    height: '1990px',
+    marginTop: '-160px',
+    marginBottom: '-160px',
+  });
+
+  useEffect(() => {
+    const updateStyle = () => {
+      const w = window.innerWidth;
+
+      if (w >= 1024) {
+        // Desktop
+        setIframeStyle({ height: '1990px', marginTop: '-160px', marginBottom: '-160px' });
+      } else if (w > 832) {
+        // Tablet — 833px to 1023px (awkward range)
+        setIframeStyle({ height: '1990px', marginTop: '-180px', marginBottom: '-120px' });
+      } else if (w >= 480) {
+        // Small tablet / large phone
+        setIframeStyle({ height: '2500px', marginTop: '-180px', marginBottom: '-550px' });
+      } else {
+        // Mobile phone (≤ 480px)
+        setIframeStyle({ height: '3000px', marginTop: '-200px', marginBottom: '-920px' });
+      }
+    };
+
+    updateStyle();
+    window.addEventListener('resize', updateStyle);
+    return () => window.removeEventListener('resize', updateStyle);
+  }, []);
 
   const ORIFLAME_URL =
     'https://tr.oriflame.com/business-opportunity/become-consultant?store=TR-kagan2532287006&sc_device=Blog';
@@ -25,7 +52,7 @@ const OriflameIframe = () => {
           Ücretsiz Kayıt Formu
         </h3>
         <p className="text-white/90 text-sm mt-1 font-medium tracking-wider">
-          GÜVENLİ & DOĞRUDAN BAĞLANTI
+          GÜVENLİ &amp; DOĞRUDAN BAĞLANTI
         </p>
       </div>
 
@@ -45,11 +72,7 @@ const OriflameIframe = () => {
           src={ORIFLAME_URL}
           onLoad={() => setLoading(false)}
           className="w-full border-0 relative z-10"
-          style={{
-            height: '1990px', // Compensating the 180px shift + dynamic errors
-            marginTop: '-160px', // Hides the "Marka Ortağı olun" and description text
-            marginBottom: '-160px' // Balances the height so container isn't excessively tall
-          }}
+          style={iframeStyle}
           scrolling="no"
           title="Oriflame Kayıt"
           loading="lazy"

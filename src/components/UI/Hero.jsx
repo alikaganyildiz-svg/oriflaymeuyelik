@@ -67,7 +67,7 @@ const Hero = () => {
                     </div>
 
                     {/* Right Column: Iframe Form */}
-                    <div className="w-full lg:w-1/2 relative">
+                    <div className="w-full max-w-lg mx-auto lg:max-w-none lg:mx-0 lg:w-1/2 relative">
                         <div className="relative z-20 transform lg:translate-y-10"> {/* Slight overlap or adjust */}
                             {/* Optional Badge */}
                             <div className="absolute -top-6 -right-6 z-30 hidden lg:block">
