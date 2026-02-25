@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://oriflaymekayit.com'), // Replace with actual domain if known
+  metadataBase: new URL('https://oriflaymeuyelik.com'), // Replace with actual domain if known
   title: {
     default: "Oriflame Ücretsiz Üyelik & Türkiye Online Katalog",
     template: "%s | Oriflame Üyelik",
@@ -55,8 +55,8 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Oriflame Türkiye Üyelik ve Kayıt",
-              "url": "https://oriflaymekayit.com",
-              "logo": "https://oriflaymekayit.com/favicon.ico",
+              "url": "https://oriflaymeuyelik.com",
+              "logo": "https://oriflaymeuyelik.com/favicon.ico",
               "description": "Oriflame dünyasına katılın, sermayesiz iş fırsatıyla ücretsiz kayıt olun. Güncel online katalog ürünlerindeki mükemmel indirim ve kazançlardan yararlanın.",
               "address": {
                 "@type": "PostalAddress",
