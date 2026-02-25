@@ -1,28 +1,51 @@
-import { getSortedPostsData } from '@/lib/blog';
+import { getAllPosts } from '@/services/blog-service';
 
 export default async function sitemap() {
-    const baseUrl = 'https://oriflaymekayit.com';
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://oriflaymekayit.com';
 
-    // Get all blog posts
-    const posts = await getSortedPostsData();
+    // Get all posts for dynamic routes
+    const posts = await getAllPosts();
+
     const blogUrls = posts.map((post) => ({
-        url: `${baseUrl}/blog/${post.id}`,
+        url: `${baseUrl}/blog/${post.slug}`,
         lastModified: new Date(post.date),
-        changeFrequency: 'weekly',
+        changeFrequency: 'daily',
         priority: 0.8,
     }));
 
-    // Main pages with specific priorities
-    const routes = [
-        { route: '', priority: 1.0, freq: 'daily' },
-        { route: '/katalog', priority: 0.9, freq: 'daily' },
-        { route: '/blog', priority: 0.9, freq: 'daily' }
-    ].map(({ route, priority, freq }) => ({
-        url: `${baseUrl}${route}`,
-        lastModified: new Date(),
-        changeFrequency: freq,
-        priority: priority,
+    const arsivUrls = posts.map((post) => ({
+        url: `${baseUrl}/blog/arsiv/${post.slug}`,
+        lastModified: new Date(post.date),
+        changeFrequency: 'daily',
+        priority: 0.7,
     }));
 
-    return [...routes, ...blogUrls];
+    return [
+        {
+            url: baseUrl,
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 1,
+        },
+        {
+            url: `${baseUrl}/katalog`,
+            lastModified: new Date(),
+            changeFrequency: 'daily',
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/blog`,
+            lastModified: new Date(),
+            changeFrequency: 'daily',
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/blog/arsiv`,
+            lastModified: new Date(),
+            changeFrequency: 'daily',
+            priority: 0.8,
+        },
+        ...blogUrls,
+        ...arsivUrls,
+    ];
 }
