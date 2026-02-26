@@ -9,7 +9,7 @@ const Hero = () => {
             {/* Background Image Layer */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="https://images.unsplash.com/photo-1596462502278-27bfdd403348?q=80&w=2070&auto=format&fit=crop"
+                    src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=2070&auto=format&fit=crop"
                     alt="Oriflame Background"
                     fill
                     priority={true}
@@ -41,9 +41,9 @@ const Hero = () => {
 
                         <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 pt-6 border-b border-gray-200 pb-8 mb-8 w-full">
                             <div className="flex -space-x-4">
-                                <Image width={56} height={56} className="rounded-full border-4 border-white shadow-md" src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" />
-                                <Image width={56} height={56} className="rounded-full border-4 border-white shadow-md" src="https://randomuser.me/api/portraits/women/65.jpg" alt="User" />
-                                <Image width={56} height={56} className="rounded-full border-4 border-white shadow-md" src="https://randomuser.me/api/portraits/women/32.jpg" alt="User" />
+                                <Image width={56} height={56} className="rounded-full border-4 border-white shadow-md" src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" loading="lazy" />
+                                <Image width={56} height={56} className="rounded-full border-4 border-white shadow-md" src="https://randomuser.me/api/portraits/women/65.jpg" alt="User" loading="lazy" />
+                                <Image width={56} height={56} className="rounded-full border-4 border-white shadow-md" src="https://randomuser.me/api/portraits/women/32.jpg" alt="User" loading="lazy" />
                                 <div className="w-14 h-14 rounded-full border-4 border-white bg-gray-100 flex items-center justify-center text-sm font-bold text-gray-600 shadow-md">+25k</div>
                             </div>
                             <p className="text-base text-gray-700 font-medium">

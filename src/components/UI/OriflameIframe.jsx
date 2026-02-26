@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 
 const OriflameIframe = () => {
   const [loading, setLoading] = useState(true);
+  const [shouldLoad, setShouldLoad] = useState(false);
 
   // Responsive iframe style values based on window width.
   // On mobile the Oriflame form reflows to a taller single-column layout,
@@ -35,7 +36,29 @@ const OriflameIframe = () => {
 
     updateStyle();
     window.addEventListener('resize', updateStyle);
-    return () => window.removeEventListener('resize', updateStyle);
+
+    // Interaction-based lazy loading
+    const triggerLoad = () => {
+      setShouldLoad(true);
+      window.removeEventListener('scroll', triggerLoad);
+      window.removeEventListener('touchstart', triggerLoad);
+      window.removeEventListener('mousemove', triggerLoad);
+    };
+
+    window.addEventListener('scroll', triggerLoad, { passive: true });
+    window.addEventListener('touchstart', triggerLoad, { passive: true });
+    window.addEventListener('mousemove', triggerLoad, { passive: true });
+
+    // Fallback if no interaction
+    const timeout = setTimeout(triggerLoad, 3500);
+
+    return () => {
+      window.removeEventListener('resize', updateStyle);
+      window.removeEventListener('scroll', triggerLoad);
+      window.removeEventListener('touchstart', triggerLoad);
+      window.removeEventListener('mousemove', triggerLoad);
+      clearTimeout(timeout);
+    };
   }, []);
 
   const ORIFLAME_URL =
@@ -68,15 +91,17 @@ const OriflameIframe = () => {
 
       {/* ── NATIVE IFRAME ── */}
       <div className={`relative w-full bg-white transition-opacity duration-500 overflow-hidden ${loading ? 'opacity-0' : 'opacity-100'}`}>
-        <iframe
-          src={ORIFLAME_URL}
-          onLoad={() => setLoading(false)}
-          className="w-full border-0 relative z-10"
-          style={iframeStyle}
-          scrolling="no"
-          title="Oriflame Kayıt"
-          loading="lazy"
-        />
+        {shouldLoad && (
+          <iframe
+            src={ORIFLAME_URL}
+            onLoad={() => setLoading(false)}
+            className="w-full border-0 relative z-10"
+            style={iframeStyle}
+            scrolling="no"
+            title="Oriflame Kayıt"
+            loading="lazy"
+          />
+        )}
         {/* Alttaki istenmeyen harfleri/footer kırpıntılarını gizleyen beyaz bant */}
         <div className="absolute bottom-0 left-0 w-full h-10 bg-white z-20 pointer-events-none" />
       </div>
