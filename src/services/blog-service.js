@@ -60,6 +60,7 @@ const createSlug = (title) => {
 };
 
 import { generateDailyBlogContent } from './ai.js';
+import { getSortedPostsData, getPostData } from '../lib/blog.js';
 
 export async function getLatestPost() {
     const posts = await getPosts();
@@ -114,10 +115,39 @@ export async function generateAndSaveNewPost(forceTestMode = false) {
 }
 
 export async function getAllPosts() {
-    return await getPosts();
+    const redisPosts = await getPosts();
+    const markdownPosts = getSortedPostsData();
+
+    // Combine both arrays
+    const allPosts = [...redisPosts, ...markdownPosts];
+
+    // Sort combined by date descending
+    allPosts.sort((a, b) => {
+        const dateA = new Date(a.date).getTime();
+        const dateB = new Date(b.date).getTime();
+        return dateB - dateA;
+    });
+
+    return allPosts;
 }
 
 export async function getPostBySlug(slug) {
+    // First check redis
     const posts = await getPosts();
-    return posts.find(post => post.slug === slug);
+    const aiPost = posts.find(post => post.slug === slug);
+    if (aiPost) return aiPost;
+
+    // If not found in Redis, check local markdown files
+    const mdPost = await getPostData(slug);
+    if (mdPost) {
+        // Return standard structure. Ensure contentHtml is returned as content for generic components
+        return {
+            ...mdPost,
+            slug: mdPost.id,
+            content: mdPost.contentHtml, // ensure Markdown HTML can be rendered exactly like AI post HTML
+            generated_image_url: mdPost.image, // Map frontmatter `image` to AI `generated_image_url`
+        };
+    }
+
+    return null;
 }
