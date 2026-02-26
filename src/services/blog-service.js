@@ -1,5 +1,7 @@
 
 import { createClient } from 'redis';
+import { generateDailyBlogContent } from './ai.js';
+import { getSortedPostsData, getPostData } from '@/lib/blog';
 
 // Initialize Redis client
 const client = createClient({
@@ -59,8 +61,6 @@ const createSlug = (title) => {
         .replace(/\s+/g, '-');
 };
 
-import { generateDailyBlogContent } from './ai.js';
-import { getSortedPostsData, getPostData } from '../lib/blog.js';
 
 export async function getLatestPost() {
     const posts = await getAllPosts();
@@ -114,7 +114,6 @@ export async function generateAndSaveNewPost(forceTestMode = false) {
     return newPost;
 }
 
-import { getSortedPostsData, getPostData } from '@/lib/blog';
 
 export async function getAllPosts() {
     const redisPosts = await getPosts();
