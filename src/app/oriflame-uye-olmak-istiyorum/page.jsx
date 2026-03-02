@@ -1,4 +1,3 @@
-import PopularSearches from '@/components/UI/PopularSearches';
 import Link from 'next/link';
 
 export const metadata = {
@@ -145,14 +144,8 @@ export default function UyeOlPage() {
                                 </svg>
                             </Link>
                         </div>
-
                     </div>
                 </main>
-
-                {/* Footer Additions */}
-                <div className="mt-auto">
-                    <PopularSearches />
-                </div>
             </div>
         </>
     );

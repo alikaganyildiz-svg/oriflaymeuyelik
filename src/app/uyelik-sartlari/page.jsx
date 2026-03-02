@@ -1,4 +1,3 @@
-import PopularSearches from '@/components/UI/PopularSearches';
 import Link from 'next/link';
 
 
@@ -205,11 +204,6 @@ export default function UyelikSartlariPage() {
 
                     </div>
                 </main>
-
-                {/* Footer Additions */}
-                <div className="mt-auto">
-                    <PopularSearches />
-                </div>
             </div>
         </>
     );
