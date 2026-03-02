@@ -6,7 +6,7 @@ const PopularSearches = () => {
         {
             title: "Üyelik ve Kayıt",
             links: [
-                { name: "Oriflame Üye Olmak İstiyorum", href: "/blog/oriflame-uye-olmak-istiyorum" },
+                { name: "Oriflame Üye Olmak İstiyorum", href: "https://oriflaymeuyelik.com/oriflame-uye-olmak-istiyorum" },
                 { name: "Üyelik Şartları", href: "/uyelik-sartlari" },
                 { name: "Marka Ortağı Başvurusu", href: "/marka-ortagi-basvurusu" },
                 { name: "Kayıt Formu", href: "/kayit-formu" },
