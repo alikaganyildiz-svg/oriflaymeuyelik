@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import Image from 'next/image';
 
 export const metadata = {
     title: 'Oriflame Üyelik Şartları 2026 | Ücretsiz ve Şartsız Kayıt',
@@ -61,9 +61,22 @@ export default function UyelikSartlariPage() {
             />
             <div className="min-h-screen bg-slate-50 flex flex-col">
                 {/* Main Content Area */}
-                <main className="flex-grow pt-16 pb-24">
-                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <main className="flex-grow pb-24">
 
+                    {/* Hero Image Section */}
+                    <div className="w-full relative h-72 md:h-96 lg:h-[450px] mb-12">
+                        <Image
+                            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+                            alt="Oriflame üyelik şartları ve ücretsiz kayıt detayları"
+                            fill
+                            priority
+                            className="object-cover object-center"
+                            sizes="100vw"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent"></div>
+                    </div>
+
+                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 relative z-10">
                         {/* Header Section */}
                         <div className="text-center mb-16">
                             <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
