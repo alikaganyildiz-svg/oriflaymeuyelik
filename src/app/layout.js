@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import Breadcrumbs from "@/components/UI/Breadcrumbs";
+import PopularSearches from "@/components/UI/PopularSearches";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -70,6 +71,7 @@ export default function RootLayout({ children }) {
         <main>
           {children}
         </main>
+        <PopularSearches />
         <Footer />
       </body>
     </html>
