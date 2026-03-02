@@ -1,6 +1,5 @@
 import Link from 'next/link';
-
-export const metadata = {
+import Image from 'next/image'; export const metadata = {
     title: 'Oriflame Üye Ol: Ücretsiz Kayıt ve Fırsatlar | Bağımsız Marka Ortağı',
     description: 'Oriflame\'e ücretsiz üye olun, %20 geliş fiyatı indiriminden ve hoşgeldin hediyelerinden hemen yararlanın. Kayıt formunu doldurun.',
 };
@@ -60,8 +59,22 @@ export default function UyeOlPage() {
             />
             <div className="min-h-screen bg-gray-50 flex flex-col">
                 {/* Main Content Area */}
-                <main className="flex-grow pt-16 pb-24">
-                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <main className="flex-grow pb-24">
+
+                    {/* Hero Image Section */}
+                    <div className="w-full relative h-72 md:h-96 lg:h-[450px] mb-12">
+                        <Image
+                            src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80"
+                            alt="Oriflame üye olmak istiyorum - güvenilir ve ücretsiz online kayıt formu"
+                            fill
+                            priority
+                            className="object-cover object-center"
+                            sizes="100vw"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-gray-50 via-transparent to-transparent"></div>
+                    </div>
+
+                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 relative z-10">
 
                         {/* Header Section */}
                         <div className="text-center mb-16">
