@@ -38,6 +38,21 @@ export default function UcretsizUyelikAvantajlariPage() {
         ]
     };
 
+    const faqs = [
+        {
+            question: "Üye olunca ne kadar indirim kazanırım?",
+            answer: "Tüm Oriflame ürünlerini katalog fiyatı üzerinden anında %20 indirimli 'geliş fiyatıyla' alırsınız."
+        },
+        {
+            question: "Hoşgeldin Programı nedir?",
+            answer: "Yeni üyelere özel, ilk 3 ay boyunca sipariş verdikçe kazanılan muhteşem hediye paketleridir."
+        },
+        {
+            question: "Üyelik için ücret ödeyecek miyim?",
+            answer: "Hayır, üyelik tamamen ücretsizdir, kayıt ücreti veya aidat kesinlikle yoktur."
+        }
+    ];
+
     return (
         <>
             <script
@@ -134,6 +149,29 @@ export default function UcretsizUyelikAvantajlariPage() {
                                         </p>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        {/* FAQ Section */}
+                        <div className="mb-16">
+                            <h2 className="text-3xl font-bold text-slate-800 mb-8 text-center">Sıkça Sorulan Sorular</h2>
+                            <div className="space-y-4">
+                                {faqs.map((faq, index) => (
+                                    <details
+                                        key={index}
+                                        className="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden"
+                                    >
+                                        <summary className="flex items-center justify-between cursor-pointer p-6 font-semibold text-slate-800 text-lg hover:bg-slate-50 transition-colors">
+                                            {faq.question}
+                                            <span className="transition duration-300 group-open:-rotate-180">
+                                                <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                                            </span>
+                                        </summary>
+                                        <div className="px-6 pb-6 text-slate-600 text-base leading-relaxed bg-white border-t border-slate-50">
+                                            <p className="mt-4">{faq.answer}</p>
+                                        </div>
+                                    </details>
+                                ))}
                             </div>
                         </div>
 
