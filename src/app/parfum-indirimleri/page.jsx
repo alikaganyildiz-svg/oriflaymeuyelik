@@ -71,7 +71,7 @@ export default function ParfumIndirimleriPage() {
                         </div>
 
                         <Image
-                            src="/parfum-indirimleri.jpg"
+                            src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=2000"
                             alt="Oriflame kalıcı kadın ve erkek parfüm indirimleri"
                             fill
                             className="object-cover relative z-10"

@@ -71,7 +71,7 @@ export default function WellnessUrunleriPage() {
                         </div>
 
                         <Image
-                            src="/wellness-urunleri.jpg"
+                            src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=2000"
                             alt="Oriflame Wellness Omega 3 ve takviye edici gıdalar"
                             fill
                             className="object-cover relative z-10"

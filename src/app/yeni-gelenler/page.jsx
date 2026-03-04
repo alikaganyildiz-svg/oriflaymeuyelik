@@ -71,7 +71,7 @@ export default function YeniGelenlerPage() {
                         </div>
 
                         <Image
-                            src="/yeni-gelenler.jpg"
+                            src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=2000"
                             alt="Oriflame bu ayın yeni gelen kozmetik ürünleri ve lansmanları"
                             fill
                             className="object-cover relative z-10"

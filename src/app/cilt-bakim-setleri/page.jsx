@@ -71,7 +71,7 @@ export default function CiltBakimSetleriPage() {
                         </div>
 
                         <Image
-                            src="/cilt-bakim-setleri.jpg"
+                            src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=2000"
                             alt="Oriflame NovAge ve Optimals Cilt Bakım Setleri"
                             fill
                             className="object-cover relative z-10"

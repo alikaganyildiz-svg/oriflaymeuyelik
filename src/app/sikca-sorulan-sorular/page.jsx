@@ -132,7 +132,7 @@ export default function FAQPage() {
                         </div>
 
                         <Image
-                            src="/sikca-sorulan-sorular.jpg"
+                            src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&q=80&w=2000"
                             alt="Oriflame üyelik ve sipariş sıkça sorulan sorular"
                             fill
                             className="object-cover relative z-10"

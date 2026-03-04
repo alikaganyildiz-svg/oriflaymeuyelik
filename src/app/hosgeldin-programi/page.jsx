@@ -72,7 +72,7 @@ export default function HosgeldinProgramiPage() {
                         </div>
 
                         <Image
-                            src="/hosgeldin-programi.jpg"
+                            src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=2000"
                             alt="Oriflame Hoşgeldin Programı yeni üye hediyeleri"
                             fill
                             className="object-cover relative z-10"

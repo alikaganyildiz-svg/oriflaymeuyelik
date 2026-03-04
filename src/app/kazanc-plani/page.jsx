@@ -71,7 +71,7 @@ export default function KazancPlaniPage() {
                         </div>
 
                         <Image
-                            src="/kazanc-plani.jpg"
+                            src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=2000"
                             alt="Oriflame kazanç planı ve başarı basamakları"
                             fill
                             className="object-cover relative z-10"

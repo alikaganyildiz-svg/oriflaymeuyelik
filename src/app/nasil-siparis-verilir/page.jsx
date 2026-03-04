@@ -71,7 +71,7 @@ export default function NasilSiparisVerilirPage() {
                         </div>
 
                         <Image
-                            src="/nasil-siparis-verilir.jpg"
+                            src="https://images.unsplash.com/photo-1586880244406-556ebe35f282?auto=format&fit=crop&q=80&w=2000"
                             alt="Oriflame online sipariş verme ve kargo süreci"
                             fill
                             className="object-cover relative z-10"

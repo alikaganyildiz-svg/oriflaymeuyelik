@@ -71,7 +71,7 @@ export default function IletisimPage() {
                                 <div className="absolute inset-0 bg-gradient-to-br from-teal-50 to-primary/20 flex items-center justify-center animate-pulse"></div>
 
                                 <Image
-                                    src="/iletisim.jpg"
+                                    src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&q=80&w=2000"
                                     alt="Oriflame iletişim ve üyelik desteği"
                                     fill
                                     className="object-cover relative z-10"

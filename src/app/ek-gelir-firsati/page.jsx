@@ -71,7 +71,7 @@ export default function EkGelirFirsatiPage() {
                         </div>
 
                         <Image
-                            src="/ek-gelir-firsati.jpg"
+                            src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?auto=format&fit=crop&q=80&w=2000"
                             alt="Oriflame evden ek gelir ve esnek çalışma fırsatı"
                             fill
                             className="object-cover relative z-10"

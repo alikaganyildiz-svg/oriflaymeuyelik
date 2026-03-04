@@ -38,7 +38,7 @@ export default function HakkimdaPage() {
 
                                 <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-8 border-white shadow-2xl overflow-hidden z-10">
                                     <Image
-                                        src="/profil-fotografi.jpg" // Kendi fotoğrafınız ile değiştirin
+                                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" // Kendi fotoğrafınız ile değiştirin
                                         alt="Oriflame Bağımsız Lideri ve Marka Ortağı"
                                         fill
                                         className="object-cover"

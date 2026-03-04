@@ -64,7 +64,7 @@ export default function OriflameHosgeldinProgrami2026Page() {
                                 <Gift className="w-16 h-16 text-pink-200" />
                             </div>
                             <Image
-                                src="/hosgeldin-programi-hediyeleri.jpg"
+                                src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=2000"
                                 alt="Oriflame 2026 Hoşgeldin Programı Hediyeleri"
                                 fill
                                 className="object-cover relative z-10"
