@@ -8,9 +8,9 @@ import html from 'remark-html';
 const postsDirectory = path.join(process.cwd(), 'src/content/blog');
 
 export function getSortedPostsData() {
-    // Create directory if it doesn't exist
+    // If directory doesn't exist, just return an empty array (Vercel has a read-only filesystem)
     if (!fs.existsSync(postsDirectory)) {
-        fs.mkdirSync(postsDirectory, { recursive: true });
+        return [];
     }
 
     const fileNames = fs.readdirSync(postsDirectory);
