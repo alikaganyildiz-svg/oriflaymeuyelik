@@ -139,7 +139,7 @@ export async function getAllPosts() {
             title: 'Oriflame Hoşgeldin Programı 2026: İlk 3 Ay Hediyeleri',
             content: 'Oriflame 2026 Hoşgeldin Programı (HP) ile ilk 3 ayınızda kazanacağınız muhteşem parfüm ve kozmetik hediyelerini keşfedin.',
             image_keyword: 'gift',
-            generated_image_url: '/hosgeldin-programi-hediyeleri.jpg',
+            generated_image_url: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=2000',
             category: 'Kampanya',
             date: '2026-03-04',
             isStatic: true
