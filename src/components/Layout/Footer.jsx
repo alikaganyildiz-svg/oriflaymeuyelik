@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Instagram, Youtube, Twitter } from 'lucide-react';
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -32,12 +33,13 @@ const Footer = () => {
 
                     {/* Column 3 */}
                     <div>
-                        <h3 className="text-lg font-bold mb-6 font-serif">Kategoriler</h3>
+                        <h3 className="text-lg font-bold mb-6 font-serif">Hızlı Bağlantılar</h3>
                         <ul className="space-y-3 text-sm text-gray-400">
-                            <li><a href="#" className="hover:text-white transition-colors">Cilt Bakımı</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Makyaj</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Parfüm</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Wellness</a></li>
+                            <li><Link href="/blog/oriflame-kazanc-tablosu-2026" className="hover:text-white transition-colors">Kazanç Tablosu (2026)</Link></li>
+                            <li><Link href="/blog/oriflame-kargo-sifirlama-2026" className="hover:text-white transition-colors">Kargo Sıfırlama Taktikleri</Link></li>
+                            <li><Link href="/iade-kosullari" className="hover:text-white transition-colors">İade ve İptal Koşulları</Link></li>
+                            <li><Link href="/katalog" className="hover:text-white transition-colors">Güncel Oriflame Kataloğu</Link></li>
+                            <li><Link href="/blog" className="hover:text-white transition-colors">Güzellik Bloğu</Link></li>
                         </ul>
                     </div>
 
