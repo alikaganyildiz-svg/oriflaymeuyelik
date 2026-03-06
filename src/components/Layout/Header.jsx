@@ -16,6 +16,7 @@ const Header = () => {
     const guideLinks = [
         { name: 'Kazanç Tablosu', href: '/blog/oriflame-kazanc-tablosu-2026' },
         { name: 'Kargo Sıfırlama', href: '/blog/oriflame-kargo-sifirlama-2026' },
+        { name: 'NovAge Leke Seti', href: '/novage-leke-giderici-set-incelemesi' },
     ];
 
     return (
