@@ -72,7 +72,7 @@ export default function NovageLekeGidericiİncelemesi() {
                     <div className="relative w-full h-[300px] md:h-[500px] mb-12 rounded-2xl overflow-hidden shadow-xl">
                         <div className="absolute inset-0 bg-blue-900/5 z-10" />
                         <Image
-                            src="/novage-leke-karsiti-set.jpg"
+                            src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=2000"
                             alt="Oriflame NovAge leke karşıtı cilt bakım seti"
                             fill
                             priority

@@ -65,7 +65,7 @@ export default function OriflameKazancTablosu2026() {
                     <div className="relative w-full h-[250px] md:h-[450px] mb-12 rounded-2xl overflow-hidden shadow-xl">
                         <div className="absolute inset-0 bg-green-900/10 z-10" /> {/* Subtle overlay */}
                         <Image
-                            src="/oriflame-kazanc-gorseli.jpg"
+                            src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=2000"
                             alt="2026 Oriflame kazanç tablosu ve başarı primleri"
                             fill
                             priority

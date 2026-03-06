@@ -56,7 +56,7 @@ export default function UyelikIptaliVeYenileme() {
                     <div className="relative w-full h-[250px] md:h-[450px] mb-12 rounded-2xl overflow-hidden shadow-xl">
                         <div className="absolute inset-0 bg-green-900/10 z-10" />
                         <Image
-                            src="/oriflame-uyelik-yenileme.jpg"
+                            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=2000"
                             alt="Oriflame üyelik yenileme ve yeni bir ekiple başlangıç"
                             fill
                             priority
