@@ -62,7 +62,7 @@ export default function Home() {
               <div className="relative h-56 md:h-64 w-full overflow-hidden">
                 <div className="absolute inset-0 bg-green-900/10 z-10 group-hover:bg-transparent transition-colors duration-500"></div>
                 <Image
-                  src="/oriflame-kazanc-gorseli.jpg"
+                  src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=2000"
                   alt="2026 Oriflame Kazanç Tablosu"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -86,7 +86,7 @@ export default function Home() {
               <div className="relative h-56 md:h-64 w-full overflow-hidden">
                 <div className="absolute inset-0 bg-green-900/10 z-10 group-hover:bg-transparent transition-colors duration-500"></div>
                 <Image
-                  src="/oriflame-kargo-gorseli.jpg"
+                  src="https://images.unsplash.com/photo-1586528116311-ad8ed7c159ad?auto=format&fit=crop&q=80&w=2000"
                   alt="Oriflame Kargo Sıfırlama Taktikleri"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
