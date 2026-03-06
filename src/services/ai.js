@@ -9,20 +9,16 @@ export async function generateDailyBlogContent() {
 
     // Generate random topic from pool
     const topicsPool = [
-        "Mevsimsel Cilt Bakımı ve Koruma Yöntemleri",
-        "Girişimcilik, Ek Gelir ve Finansal Özgürlük",
-        "Makyaj Trendleri ve Uygulama Teknikleri",
-        "İsveçli Güzellik Sırları ve Doğal İçerikler",
-        "Sağlıklı Yaşam, Beslenme ve Wellness",
-        "Kişisel Gelişim, Özgüven ve Motivasyon",
-        "Saç Bakımı ve Güçlü Saçlar İçin İpuçları",
-        "Parfüm Dünyası ve Koku Seçimi Rehberi",
-        "Oriflame ile Seyahat ve Yaşam Tarzı",
-        "Erkek Bakımı ve Günlük Rutinler",
-        "Sürdürülebilirlik ve Doğa Dostu Yaşam",
-        "Vücut Bakımı ve Spa Keyfi (Evde)",
-        "Anne ve Bebek Bakımı Hassas Dokunuşlar",
-        "Renkler, Moda ve Kişisel Stil Önerileri"
+        "Mart & Nisan Bahar Cilt Bakımı Süreci ve NovAge+ Tavsiyesi",
+        "Ramazan Bayramı Makyaj Önerileri ve Kalıcı Rujlar",
+        "Düğün Sezonuna Hazırlık: Pürüzsüz Bir Cilt ve Parlayan Saçlar",
+        "Yaz Geliyor: Vücut Sıkılaştırma ve Selülit Karşıtı Optimals Serileri",
+        "Anneler Günü İçin En Özel Oriflame Parfüm Hediyeleri",
+        "Sağlıklı Yaşam ve Diyet: Wellness by Oriflame ile Formda Kalın",
+        "The One Serisi ile Trend İncelemesi: Pratik ve Etkili Güzellik",
+        "Giordani Gold'un Lüksü: 50 Yaş Üstü Zarafet ve Olgun Cilt Bakımı",
+        "Güneş Koruyucular (Sun 360) Neden Baharda Şarttır?",
+        "Eczane Cilt Bakımından Esinlenen NovAge Routine Neden Farklı?"
     ];
     const selectedTheme = topicsPool[Math.floor(Math.random() * topicsPool.length)];
 
@@ -34,23 +30,31 @@ export async function generateDailyBlogContent() {
     GÖREV:
     Bu genel temadan yola çıkarak, bugünün tarihine ve mevsime uygun, okuyucuyu içine çeken, duygusal ve ilham verici bir makale yaz.
     
-    AŞIRI ÖNEMLİ FORMAT KURALLARI (Harfiyen uyulmalı):
-    1.  **JSON Response:** Yanıtın SADECE geçerli bir JSON objesi olmalı. Markdown kod bloğu kullanma.
-    2.  **HTML Content:** 'content' alanı, tarayıcıda render edilecek **SAF HTML** kodu içermelidir.
-    3.  **Gizlilik:** Yazının yapay zeka tarafından yazıldığını ASLA belli etme. "Editörlerimiz", "Yapay Zeka" gibi ifadeler kullanma. Sanki gerçek bir moda editörü yazmış gibi davran.
-        -   Metni MUTLAKA paragraf <p> etiketleri içine al. (En az 4-5 paragraf)
-        -   Bölümleri ayırmak için <h2> kullan.
-        -   Alt başlıklar için <h3> kullan.
-        -   İlham verici bir sözü <blockquote> içine al.
-        -   Önerilerini <ul> ve <li> etiketleri ile listele.
-        -   Asla düz metin kullanma, her şey HTML etiketi içinde olmalı.
+    ALTIN KURALLAR (HARFİYEN UYULACAK):
+    
+    1. BAĞLAM VE SATIŞ ODAKLILIK: Yazıyı sadece bilgi vererek BİTİREMEZSİN. Mutlaka yazının son çeyreğinde konuyu Oriflame ürünlerine, '%20 indirim' fırsatına, 'geliş fiyatından alma' avantajına ve tamamen ücretsiz Marka Ortağı olmanın faydalarına BAĞLAMALISIN. Okuyucuyu üye olmaya çok güçlü şekilde ikna et.
+
+    2. SABİT VE ŞIK CTA BUTONU ZORUNLULUĞU: Makalenin en altına, yazının bitişinden hemen sonra, düz metin linki YERİNE AŞAĞIDAKİ HTML KOD BLOĞUNU ZORUNLU OLARAK, BİREBİR KOPYALAYARAK YAPIŞTIR:
+       <div class="flex justify-center mt-12 mb-4">
+         <a href="/#basvuru" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-transform transform hover:-translate-y-1 text-center no-underline">
+           🎁 İndirimleri Kaçırmamak ve Ücretsiz Üye Olmak İçin Hemen Tıklayın!
+         </a>
+       </div>
+
+    3. KESİNLİKLE YASAK OLANLAR (KIRMIZI ÇİZGİ): Yazının hiçbir yerine KESİNLİKLE WhatsApp, Instagram, Facebook gibi paylaşım ikonları, linkleri veya butonları EKLEME. "PopularSearches" gibi bileşenler EKLEME. Okuyucunun tıklayacağı TEK YER, yukarıda verdiğim yeşil CTA butonu olmalıdır.
+    
+    4. FORMAT VE GİZLİLİK: 
+        - Yanıtın SADECE geçerli bir JSON objesi olmalı.
+        - 'content' alanı tarayıcıda render edilecek SAF HTML olmalıdır.
+        - Yazının yapay zeka tarafından yazıldığını ASLA belli etme.
+        - Paragrafları <p>, başlıkları <h2> ve <h3>, listeleri <ul><li> ile oluştur.
     
     Beklenen JSON Yapısı:
     {
         "title": "Çarpıcı Dergi Başlığı Buraya",
-        "content": "<p>Giriş paragrafı...</p><h2>Bölüm Başlığı</h2><p>...",
-        "category": "Güzellik / Yaşam / Kariyer vb.",
-        "image_prompt": "Yazının içeriğini, atmosferini ve estetiğini en iyi yansıtan, 'Midjourney' stili, çok detaylı, fotorealistik, sinematik ışıklandırmalı İNGİLİZCE görsel oluşturma komutu. (Örn: 'Close up shot of a woman with glowing skin applying serum, natural sunlight, bokeh background, high fashion editorial style')",
+        "content": "<p>Giriş paragrafı...</p><h2>Bölüm Başlığı</h2><p>...[sihirli satış kurgusu]...[ZORUNLU HTML CTA BUTONU BURAYA]</p>",
+        "category": "Kampanya / Ürün İnceleme / Kazanç",
+        "image_prompt": "Yazının içeriğini en iyi yansıtan, fotorealistik İNGİLİZCE görsel oluşturma komutu",
         "image_keyword": "SADECE şunlardan biri: 'skincare', 'makeup', 'business', 'nature', 'perfume', 'wellness', 'hair'"
     }
 
