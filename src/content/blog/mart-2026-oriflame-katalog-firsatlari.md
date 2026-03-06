@@ -31,4 +31,8 @@ Beğendiğiniz parfümü, ihtiyacınız olan kremi veya makyaj malzemelerini sı
 
 Hem kapınıza kadar gelen kargo rahatlığını yaşar, hem bu fırsatları "geliş fiyatından" alır, hem de sipariş büyüklüğünüze göre bir sonraki ay seçeceğiniz ürünleri bedavaya getirebilirsiniz!
 
-**[Mart Ayı İndirimlerini Kaçırmamak ve Ücretsiz Üye Olmak İçin Hemen Tıklayın!](/#basvuru)**
+<div className="flex justify-center mt-12 mb-4">
+  <a href="/#basvuru" className="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-transform transform hover:-translate-y-1 text-center no-underline">
+    🎁 Mart Ayı İndirimlerini Kaçırmamak ve Ücretsiz Üye Olmak İçin Hemen Tıklayın!
+  </a>
+</div>
