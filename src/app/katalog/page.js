@@ -18,7 +18,7 @@ const Catalog = () => {
             title: "Mevcut Ay Kataloğu",
             description: "En yeni ürünler, harika indirimler ve sezona özel fırsatları keşfedin.",
             baseUrl: "https://b-cdn.ipaper.io/iPaper/Papers/c6d86955-35a4-436e-8531-28edd38adf85",
-            signature: "?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZG4uaXBhcGVyLmlvL2lQYXBlci9QYXBlcnMvYzZkODY5NTUtMzVhNC00MzZlLTg1MzEtMjhlZGQzOGFkZjg1L1BhZ2VzLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3NzI3NTI3MzF9fX1dfQ__&Signature=P2ti~hq8IfjODgqgWFzS3rpt2VFhR67EnV6fNnkoO6n9DmERwcVu~FgxSMzgTibNQf7Xj06VpwZAYdvYOuFgJqSnoMQJbai0ZaPHO44WjJ0abcl0LrIn~CpoZTQyakoeGm333tJ6aIVDpXVR70VnZeBiomAEcTIpLi3ylZ7TOak_&Key-Pair-Id=APKAIPGQN6BDBMBZ2LCA",
+            signature: "?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZG4uaXBhcGVyLmlvL2lQYXBlci9QYXBlcnMvYzZkODY5NTUtMzVhNC00MzZlLTg1MzEtMjhlZGQzOGFkZjg1L1BhZ2VzLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3NzM1MzEyMzR9fX1dfQ__&Signature=iE4IeNMev4OJkPxLI2dWyYr7k2fRyKsGI0L13SAaFCXvYX5sS91ipywG6oqIJ06bIt2nWJzXj8yETOJ65m4CqdKnG0waXb1WamKfy4mq1q5u-klF8oZVE6OAeJjQtPKPiO0BizsjxyeYLtdkfUxChXHIY7muo0pfhw3B-GLc504_&Key-Pair-Id=APKAIPGQN6BDBMBZ2LCA",
             badge: "Yayında"
         },
         {
