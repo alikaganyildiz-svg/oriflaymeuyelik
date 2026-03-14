@@ -18,15 +18,17 @@ const Catalog = () => {
             title: "Mevcut Ay Kataloğu",
             description: "En yeni ürünler, harika indirimler ve sezona özel fırsatları keşfedin.",
             baseUrl: "https://b-cdn.ipaper.io/iPaper/Papers/c6d86955-35a4-436e-8531-28edd38adf85",
-            signature: "?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZG4uaXBhcGVyLmlvL2lQYXBlci9QYXBlcnMvYzZkODY5NTUtMzVhNC00MzZlLTg1MzEtMjhlZGQzOGFkZjg1L1BhZ2VzLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3NzM1MzEyMzR9fX1dfQ__&Signature=iE4IeNMev4OJkPxLI2dWyYr7k2fRyKsGI0L13SAaFCXvYX5sS91ipywG6oqIJ06bIt2nWJzXj8yETOJ65m4CqdKnG0waXb1WamKfy4mq1q5u-klF8oZVE6OAeJjQtPKPiO0BizsjxyeYLtdkfUxChXHIY7muo0pfhw3B-GLc504_&Key-Pair-Id=APKAIPGQN6BDBMBZ2LCA",
+            signature: "?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZG4uaXBhcGVyLmlvL2lQYXBlci9QYXBlcnMvYzZkODY5NTUtMzVhNC00MzZlLTg1MzEtMjhlZGQzOGFkZjg1L1BhZ2VzLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3NzM1MzA5MzV9fX1dfQ__&Signature=UrmubmxeSad7Ca1gOfaZRGvaOCjbPEWmAzWXutZYzfi~9UQYPb6IlVDgUjAGe7~y1I--6jibT65O9wWYsGscT-TpGY1~iRgGUiDzJ4JxbntIFIk4VoNPvi6R6KBdlg1bUQedsmb4dSZmYvw9-2lLneDE8P7jvd0e-I6C-oqra14_&Key-Pair-Id=APKAIPGQN6BDBMBZ2LCA",
+            coverUrl: "https://tr-catalogue.oriflame.com/oriflame-africa/tr/2026003/Image.ashx?PageNumber=1&ImageType=Normal&w=480&bc=%23f5f5f5&ib=%23f5f5f5&q=90&imageFormat=WebP",
             badge: "Yayında"
         },
         {
             id: 2,
             title: "Gelecek Ay Kataloğu",
             description: "Önümüzdeki ayın fırsatlarını şimdiden inceleyin ve siparişlerinizi planlayın.",
-            baseUrl: "https://b-cdn.ipaper.io/iPaper/Papers/c734010e-97fb-419d-bb08-14219487dd72",
-            signature: "?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZG4uaXBhcGVyLmlvL2lQYXBlci9QYXBlcnMvYzczNDAxMGUtOTdmYi00MTlkLWJiMDgtMTQyMTk0ODdkZDcyL1BhZ2VzLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3NzI3NTMwOTJ9fX1dfQ__&Signature=W~P0uafnegPmZl6zxeGq3AoahjufL-Vy12KGVl1fdWOn6t1jIjyMFt5lXXGh0fx1xX6i3gv8a8s8PXZ3UbdBQV3dy1RZowDi9tHJypNputoJwqV4lXs4QAKYspH5KszrIRblF~1pMTu3V-uJ2oVskCyUzMU2pevzKHDZ22Z~1TQ_&Key-Pair-Id=APKAIPGQN6BDBMBZ2LCA",
+            baseUrl: "https://b-cdn.ipaper.io/iPaper/Papers/a9ec412e-90de-4050-96cc-a84e69de3528",
+            signature: "?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZG4uaXBhcGVyLmlvL2lQYXBlci9QYXBlcnMvYTllYzQxMmUtOTBkZS00MDUwLTk2Y2MtYTg0ZTY5ZGUzNTI4L1BhZ2VzLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3NzM1MzA3ODB9fX1dfQ__&Signature=KqEG1Xb0f0zMBkMUhWh22RxHnzqYt1JVur0ivw5F31oAGyuuqZ449Ytq6Z7D~3cHpOR4485asRjGTO150cdkdlVngblS3n1Q9MNySIkpTdhLXt17ku2c9vf0v4sQCxhDSUAUv2C-BVbS6LqSYEwpxt3gglXtuQyilGKHMPqq4eI_&Key-Pair-Id=APKAIPGQN6BDBMBZ2LCA",
+            coverUrl: "https://tr-catalogue.oriflame.com/oriflame-africa/tr/2026004/Image.ashx?PageNumber=1&ImageType=Normal&w=480&bc=%23f5f5f5&ib=%23f5f5f5&q=90&imageFormat=WebP",
             badge: "Yakında"
         }
     ];
@@ -114,7 +116,7 @@ const Catalog = () => {
                                     </span>
                                 </div>
                                 <img
-                                    src={`${catalog.baseUrl}/Pages/1/Zoom.jpg${catalog.signature}`}
+                                    src={catalog.coverUrl}
                                     alt={catalog.title}
                                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                                 />
