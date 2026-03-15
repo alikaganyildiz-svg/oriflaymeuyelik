@@ -2,8 +2,8 @@ name: Auto Update Oriflame Catalogs
 
 on:
   schedule:
-    # Pazar günleri saat 03:00'te çalışır (UTC saatiyle)
-    - cron: "0 3 * * 0"
+    # Her gün Türkiye saatiyle 12:00'de (UTC 09:00) çalışır
+    - cron: "0 9 * * *"
   workflow_dispatch: # GitHub arayüzünden manuel tetiklemeye izin verir
 
 jobs:

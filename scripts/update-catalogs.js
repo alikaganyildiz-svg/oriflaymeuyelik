@@ -179,40 +179,51 @@ async function updateCatalogs() {
         process.exit(1);
     }
 
-    // Şimdi page.js dosyasını güncelleyelim
-    console.log('page.js dosyası güncelleniyor...');
-    const pageJsPath = path.join(__dirname, '..', 'src', 'app', 'katalog', 'page.js');
-    let pageJsContent = fs.readFileSync(pageJsPath, 'utf8');
+    // Şimdi her iki projedeki page.js dosyalarını güncelleyelim
+    const projectPaths = [
+        path.join(__dirname, '..', 'src', 'app', 'katalog', 'page.js'),
+        path.join(__dirname, '..', '..', 'oriflamekatalogun', 'src', 'app', 'katalog', 'page.js')
+    ];
 
-    // ID 1 (Mevcut Ay)
-    const regexId1BaseUrl = /id: 1,[\s\S]*?baseUrl: "([^"]+)"/;
-    const regexId1Signature = /id: 1,[\s\S]*?signature: "([^"]+)"/;
-    const regexId1CoverUrl = /id: 1,[\s\S]*?coverUrl: "([^"]+)"/;
-
-    pageJsContent = pageJsContent.replace(regexId1BaseUrl, (match) => match.replace(/"[^"]+"$/, `"${extractedData.currentCatalog.baseUrl}"`));
-    pageJsContent = pageJsContent.replace(regexId1Signature, (match) => match.replace(/"[^"]+"$/, `"${extractedData.currentCatalog.signature}"`));
-    pageJsContent = pageJsContent.replace(regexId1CoverUrl, (match) => match.replace(/"[^"]+"$/, `"${extractedData.currentCatalog.coverUrl}"`));
-
-    // ID 2 (Gelecek Ay) - Eğer bulunduysa
-    if (extractedData.nextCatalog.baseUrl && (extractedData.nextCatalog.signature || extractedData.nextCatalog.coverUrl)) {
-        console.log('ID 2 (Gelecek Ay) güncelleniyor...');
-        const regexId2BaseUrl = /id: 2,[\s\S]*?baseUrl: "([^"]+)"/;
-        const regexId2Signature = /id: 2,[\s\S]*?signature: "([^"]+)"/;
-        const regexId2CoverUrl = /id: 2,[\s\S]*?coverUrl: "([^"]+)"/;
-
-        if (extractedData.nextCatalog.baseUrl) {
-            pageJsContent = pageJsContent.replace(regexId2BaseUrl, (match) => match.replace(/"[^"]+"$/, `"${extractedData.nextCatalog.baseUrl}"`));
+    projectPaths.forEach(pageJsPath => {
+        if (!fs.existsSync(pageJsPath)) {
+            console.log(`⚠️ Dosya bulunamadı, atlanıyor: ${pageJsPath}`);
+            return;
         }
-        if (extractedData.nextCatalog.signature) {
-            pageJsContent = pageJsContent.replace(regexId2Signature, (match) => match.replace(/"[^"]+"$/, `"${extractedData.nextCatalog.signature}"`));
-        }
-        if (extractedData.nextCatalog.coverUrl) {
-            pageJsContent = pageJsContent.replace(regexId2CoverUrl, (match) => match.replace(/"[^"]+"$/, `"${extractedData.nextCatalog.coverUrl}"`));
-        }
-    }
 
-    fs.writeFileSync(pageJsPath, pageJsContent, 'utf8');
-    console.log('✅ page.js başarıyla güncellendi!');
+        console.log(`${pageJsPath} dosyası güncelleniyor...`);
+        let pageJsContent = fs.readFileSync(pageJsPath, 'utf8');
+
+        // ID 1 (Mevcut Ay)
+        const regexId1BaseUrl = /id: 1,[\s\S]*?baseUrl: "([^"]+)"/;
+        const regexId1Signature = /id: 1,[\s\S]*?signature: "([^"]+)"/;
+        const regexId1CoverUrl = /id: 1,[\s\S]*?coverUrl: "([^"]+)"/;
+
+        pageJsContent = pageJsContent.replace(regexId1BaseUrl, (match) => match.replace(/"[^"]+"$/, `"${extractedData.currentCatalog.baseUrl}"`));
+        pageJsContent = pageJsContent.replace(regexId1Signature, (match) => match.replace(/"[^"]+"$/, `"${extractedData.currentCatalog.signature}"`));
+        pageJsContent = pageJsContent.replace(regexId1CoverUrl, (match) => match.replace(/"[^"]+"$/, `"${extractedData.currentCatalog.coverUrl}"`));
+
+        // ID 2 (Gelecek Ay) - Eğer bulunduysa
+        if (extractedData.nextCatalog.baseUrl && (extractedData.nextCatalog.signature || extractedData.nextCatalog.coverUrl)) {
+            console.log('ID 2 (Gelecek Ay) güncelleniyor...');
+            const regexId2BaseUrl = /id: 2,[\s\S]*?baseUrl: "([^"]+)"/;
+            const regexId2Signature = /id: 2,[\s\S]*?signature: "([^"]+)"/;
+            const regexId2CoverUrl = /id: 2,[\s\S]*?coverUrl: "([^"]+)"/;
+
+            if (extractedData.nextCatalog.baseUrl) {
+                pageJsContent = pageJsContent.replace(regexId2BaseUrl, (match) => match.replace(/"[^"]+"$/, `"${extractedData.nextCatalog.baseUrl}"`));
+            }
+            if (extractedData.nextCatalog.signature) {
+                pageJsContent = pageJsContent.replace(regexId2Signature, (match) => match.replace(/"[^"]+"$/, `"${extractedData.nextCatalog.signature}"`));
+            }
+            if (extractedData.nextCatalog.coverUrl) {
+                pageJsContent = pageJsContent.replace(regexId2CoverUrl, (match) => match.replace(/"[^"]+"$/, `"${extractedData.nextCatalog.coverUrl}"`));
+            }
+        }
+
+        fs.writeFileSync(pageJsPath, pageJsContent, 'utf8');
+        console.log(`✅ ${path.basename(path.dirname(path.dirname(path.dirname(pageJsPath))))} içindeki page.js başarıyla güncellendi!`);
+    });
 }
 
 updateCatalogs();

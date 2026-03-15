@@ -18,7 +18,7 @@ const Catalog = () => {
             title: "Mevcut Ay Kataloğu",
             description: "En yeni ürünler, harika indirimler ve sezona özel fırsatları keşfedin.",
             baseUrl: "https://b-cdn.ipaper.io/iPaper/Papers/c6d86955-35a4-436e-8531-28edd38adf85",
-            signature: "?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZG4uaXBhcGVyLmlvL2lQYXBlci9QYXBlcnMvYzZkODY5NTUtMzVhNC00MzZlLTg1MzEtMjhlZGQzOGFkZjg1L1BhZ2VzLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3NzM1MzA5MzV9fX1dfQ__&Signature=UrmubmxeSad7Ca1gOfaZRGvaOCjbPEWmAzWXutZYzfi~9UQYPb6IlVDgUjAGe7~y1I--6jibT65O9wWYsGscT-TpGY1~iRgGUiDzJ4JxbntIFIk4VoNPvi6R6KBdlg1bUQedsmb4dSZmYvw9-2lLneDE8P7jvd0e-I6C-oqra14_&Key-Pair-Id=APKAIPGQN6BDBMBZ2LCA",
+            signature: "?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZG4uaXBhcGVyLmlvL2lQYXBlci9QYXBlcnMvYzZkODY5NTUtMzVhNC00MzZlLTg1MzEtMjhlZGQzOGFkZjg1L1BhZ2VzLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3NzM2NDg5NzB9fX1dfQ__&Signature=hCUjdNOg8ELCq7w0MnDPH3gVZ5-CAQa3Nvfe7UI-YphVPcxOq8aqjacnnjCDNwx5vK4SInJ9wGpxwOxGj9PW1kee6kSd24OIP-jbKUyt~KXj5vJADNNbPb2~kUHODS~lX9feRWeRJqLZGh0KrTulePNynCfUp3u8lcdqFnIgKhQ_&Key-Pair-Id=APKAIPGQN6BDBMBZ2LCA",
             coverUrl: "https://tr-catalogue.oriflame.com/oriflame-africa/tr/2026003/Image.ashx?PageNumber=1&ImageType=Normal&w=480&bc=%23f5f5f5&ib=%23f5f5f5&q=90&imageFormat=WebP",
             badge: "Yayında"
         },
@@ -27,7 +27,7 @@ const Catalog = () => {
             title: "Gelecek Ay Kataloğu",
             description: "Önümüzdeki ayın fırsatlarını şimdiden inceleyin ve siparişlerinizi planlayın.",
             baseUrl: "https://b-cdn.ipaper.io/iPaper/Papers/a9ec412e-90de-4050-96cc-a84e69de3528",
-            signature: "?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZG4uaXBhcGVyLmlvL2lQYXBlci9QYXBlcnMvYTllYzQxMmUtOTBkZS00MDUwLTk2Y2MtYTg0ZTY5ZGUzNTI4L1BhZ2VzLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3NzM1MzA3ODB9fX1dfQ__&Signature=KqEG1Xb0f0zMBkMUhWh22RxHnzqYt1JVur0ivw5F31oAGyuuqZ449Ytq6Z7D~3cHpOR4485asRjGTO150cdkdlVngblS3n1Q9MNySIkpTdhLXt17ku2c9vf0v4sQCxhDSUAUv2C-BVbS6LqSYEwpxt3gglXtuQyilGKHMPqq4eI_&Key-Pair-Id=APKAIPGQN6BDBMBZ2LCA",
+            signature: "?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZG4uaXBhcGVyLmlvL2lQYXBlci9QYXBlcnMvYTllYzQxMmUtOTBkZS00MDUwLTk2Y2MtYTg0ZTY5ZGUzNTI4L1BhZ2VzLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3NzM2NDk4OTF9fX1dfQ__&Signature=gHPisSwOU8GuLsdF5jN5NPDRZQaLsXiat2csl2b0l6reKBFB03d-QWk9hCSOzP1XqJ-j-qOoRLzOAMtTTeiqY9PNt6rLawDBQjyksNC2IjPL0Tne7wCnCaSUerlAdpGwGZrcaQjH23xrD5KQYDx28wuYDWg8PqkSBuMN0ZplMp8_&Key-Pair-Id=APKAIPGQN6BDBMBZ2LCA",
             coverUrl: "https://tr-catalogue.oriflame.com/oriflame-africa/tr/2026004/Image.ashx?PageNumber=1&ImageType=Normal&w=480&bc=%23f5f5f5&ib=%23f5f5f5&q=90&imageFormat=WebP",
             badge: "Yakında"
         }
@@ -199,6 +199,7 @@ const Catalog = () => {
                             {isMobile ? (
                                 // MOBILE VIEW: Single Page
                                 <img
+                                    key={`mobile-${currentPage}`}
                                     src={`${selectedCatalog.baseUrl}/Pages/${currentPage}/Zoom.jpg${selectedCatalog.signature}`}
                                     alt={`Sayfa ${currentPage}`}
                                     className="max-w-full max-h-full object-contain shadow-2xl bg-white"
@@ -209,6 +210,7 @@ const Catalog = () => {
                                 // DESKTOP VIEW: Double Page (Spread)
                                 currentPage === 1 ? (
                                     <img
+                                        key={`desktop-cover-${currentPage}`}
                                         src={`${selectedCatalog.baseUrl}/Pages/1/Zoom.jpg${selectedCatalog.signature}`}
                                         alt="Kapak"
                                         className="max-w-full h-full object-contain shadow-2xl rounded-sm bg-white"
@@ -218,6 +220,7 @@ const Catalog = () => {
                                 ) : (
                                     <>
                                         <img
+                                            key={`desktop-left-${currentPage}`}
                                             src={`${selectedCatalog.baseUrl}/Pages/${currentPage}/Zoom.jpg${selectedCatalog.signature}`}
                                             alt={`Sayfa ${currentPage}`}
                                             className="w-1/2 h-full object-contain shadow-2xl rounded-l-sm bg-white"
@@ -225,6 +228,7 @@ const Catalog = () => {
                                             onError={handleImageError}
                                         />
                                         <img
+                                            key={`desktop-right-${currentPage}`}
                                             src={`${selectedCatalog.baseUrl}/Pages/${currentPage + 1}/Zoom.jpg${selectedCatalog.signature}`}
                                             alt={`Sayfa ${currentPage + 1}`}
                                             className="w-1/2 h-full object-contain shadow-2xl rounded-r-sm bg-white"
